@@ -1,0 +1,8 @@
+reload("user.plugin-configs.alpha")
+reload("user.plugin-configs.nvim-tree")
+reload("user.plugin-configs.pretty-fold")
+reload("user.plugin-configs.terminal")
+reload("user.plugin-configs.treesitter")
+reload("user.plugin-configs.whichkey")
+reload("user.plugin-configs.lualine")
+reload("user.plugin-configs.telescope")
