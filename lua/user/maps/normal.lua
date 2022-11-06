@@ -27,7 +27,7 @@ lvim.lsp.buffer_mappings.normal_mode["gr"] = {
 }
 
 -- Function Keys
-lvim.keys.normal_mode["<F7>"] = "<cmd>Colortils picker<CR>"
+lvim.keys.normal_mode["<F7>"] = "<cmd>CccPick<CR>"
 lvim.keys.normal_mode["<F8>"] = ":call QuickFixToggle()<CR>"
 lvim.keys.normal_mode["<F9>"] = "<cmd>TroubleToggle<CR>"
 
