@@ -2,66 +2,62 @@ local cmd = require("user.cmd")
 local groups = require("user.maps.groups")
 
 ----------------------------------------------------------- No Leader
-lvim.keys.normal_mode["<CR>"] = ":w<cr>"
-lvim.keys.normal_mode["<S-l>"] = "$"
-lvim.keys.normal_mode["<S-h>"] = "^"
-lvim.keys.normal_mode["vv"] = ":norm ^v$<CR>"
+local n_map = lvim.keys.normal_mode
 
--- Better n and N (Keep Search Hit in the middle)
-lvim.keys.normal_mode["n"] = "nzzzv"
-lvim.keys.normal_mode["N"] = "Nzzzv"
-
-lvim.keys.normal_mode["dd"] = cmd.edit.smart_dd()
-
-lvim.keys.normal_mode["<M-h>"] = ":bprevious<CR>"
-lvim.keys.normal_mode["<M-l>"] = ":bnext<CR>"
-
--- g..
-lvim.lsp.buffer_mappings.normal_mode["gd"] = {
-    "<cmd>Trouble lsp_definitions<CR>",
-    "LSP Definitons",
-}
-lvim.lsp.buffer_mappings.normal_mode["gr"] = {
-    "<cmd>Trouble lsp_references<CR>",
-    "LSP References",
-}
+n_map["<CR>"] = ":w<cr>"
+n_map["<S-l>"] = "$"
+n_map["<S-h>"] = "^"
+n_map["vv"] = ":norm ^v$<CR>"
+n_map["n"] = "nzzzv"
+n_map["N"] = "Nzzzv"
+n_map["dd"] = cmd.edit.smart_dd()
+n_map["<M-h>"] = ":bprevious<CR>"
+n_map["<M-l>"] = ":bnext<CR>"
 
 -- Function Keys
-lvim.keys.normal_mode["<F7>"] = "<cmd>CccPick<CR>"
-lvim.keys.normal_mode["<F8>"] = ":call QuickFixToggle()<CR>"
-lvim.keys.normal_mode["<F9>"] = "<cmd>TroubleToggle<CR>"
+n_map["<F7>"] = "<cmd>CccPick<CR>"
+n_map["<F8>"] = ":call QuickFixToggle()<CR>"
+n_map["<F9>"] = "<cmd>TroubleToggle<CR>"
+
+-- Buffer Maps
+local n_buffer_map = lvim.lsp.buffer_mappings.normal_mode
+
+n_buffer_map["gd"] = { "<cmd>Trouble lsp_definitions<CR>", "LSP Definitons" }
+n_buffer_map["gr"] = { "<cmd>Trouble lsp_references<CR>", "LSP References" }
 
 ----------------------------------------------------------- With Leader
 lvim.leader = "space"
 
+local wk = lvim.builtin.which_key
+
 -- Disable
-lvim.builtin.which_key.mappings["w"] = {}
+wk.mappings["w"] = {}
 
 -- Singles
-lvim.builtin.which_key.mappings["n"] = { ":nohl<CR>", WhichKeyIgnoreLabel }
-lvim.builtin.which_key.mappings["z"] = { "<cmd>ZenMode<CR>", "Zen" }
-lvim.builtin.which_key.mappings["F"] = { cmd.telescope.find_files_with_preview, "Find Files with Preview" }
-lvim.builtin.which_key.mappings["/"] = { cmd.telescope.find_in_file, "Find Text in File" }
-lvim.builtin.which_key.mappings[" "] = { cmd.telescope.find_open_buffer, "Open Buffers" }
+wk.mappings["n"] = { ":nohl<CR>", WhichKeyIgnoreLabel }
+wk.mappings["z"] = { "<cmd>ZenMode<CR>", "Zen" }
+wk.mappings["F"] = { cmd.telescope.find_files_with_preview, "Find Files with Preview" }
+wk.mappings["/"] = { cmd.telescope.find_in_file, "Find Text in File" }
+wk.mappings[" "] = { cmd.telescope.find_open_buffer, "Open Buffers" }
 
 -- Groups
-lvim.builtin.which_key.mappings.t = groups.tabs
-lvim.builtin.which_key.mappings.l = groups.lsp
-lvim.builtin.which_key.mappings.m = groups.marks
-lvim.builtin.which_key.mappings.g = groups.git
-lvim.builtin.which_key.mappings.s = groups.search
-lvim.builtin.which_key.mappings.i = groups.insert
-lvim.builtin.which_key.mappings.q = groups.quit
-lvim.builtin.which_key.mappings.T = groups.terra
-lvim.builtin.which_key.mappings["Lt"] = { ":TSConfigInfo<CR>", "Treesitter Info" }
+wk.mappings.t = groups.tabs
+wk.mappings.l = groups.lsp
+wk.mappings.m = groups.marks
+wk.mappings.g = groups.git
+wk.mappings.s = groups.search
+wk.mappings.i = groups.insert
+wk.mappings.q = groups.quit
+wk.mappings.T = groups.terra
+wk.mappings["Lt"] = { ":TSConfigInfo<CR>", "Treesitter Info" }
 
 -- Tabs
-lvim.builtin.which_key.mappings["1"] = { "1gt", WhichKeyIgnoreLabel }
-lvim.builtin.which_key.mappings["2"] = { "2gt", WhichKeyIgnoreLabel }
-lvim.builtin.which_key.mappings["3"] = { "3gt", WhichKeyIgnoreLabel }
-lvim.builtin.which_key.mappings["4"] = { "4gt", WhichKeyIgnoreLabel }
-lvim.builtin.which_key.mappings["5"] = { "5gt", WhichKeyIgnoreLabel }
-lvim.builtin.which_key.mappings["6"] = { "6gt", WhichKeyIgnoreLabel }
-lvim.builtin.which_key.mappings["7"] = { "7gt", WhichKeyIgnoreLabel }
-lvim.builtin.which_key.mappings["8"] = { "8gt", WhichKeyIgnoreLabel }
-lvim.builtin.which_key.mappings["9"] = { "9gt", WhichKeyIgnoreLabel }
+wk.mappings["1"] = { "1gt", WhichKeyIgnoreLabel }
+wk.mappings["2"] = { "2gt", WhichKeyIgnoreLabel }
+wk.mappings["3"] = { "3gt", WhichKeyIgnoreLabel }
+wk.mappings["4"] = { "4gt", WhichKeyIgnoreLabel }
+wk.mappings["5"] = { "5gt", WhichKeyIgnoreLabel }
+wk.mappings["6"] = { "6gt", WhichKeyIgnoreLabel }
+wk.mappings["7"] = { "7gt", WhichKeyIgnoreLabel }
+wk.mappings["8"] = { "8gt", WhichKeyIgnoreLabel }
+wk.mappings["9"] = { "9gt", WhichKeyIgnoreLabel }
