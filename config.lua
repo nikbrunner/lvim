@@ -1,6 +1,5 @@
 reload("user.options")
 reload("user.plugins")
-reload("user.plugin-configs")
 reload("user.lib")
 reload("user.cmd")
 reload("user.maps")
