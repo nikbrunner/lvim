@@ -3,6 +3,7 @@ lvim.plugins = {
     { "ThePrimeagen/harpoon" },
     { "folke/zen-mode.nvim" },
     { "uga-rosa/ccc.nvim" },
+    { "kazhala/close-buffers.nvim" },
     {
         "anuvyklack/pretty-fold.nvim",
         requires = {

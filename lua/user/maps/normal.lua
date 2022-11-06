@@ -51,6 +51,7 @@ lvim.builtin.which_key.mappings.m = groups.marks
 lvim.builtin.which_key.mappings.g = groups.git
 lvim.builtin.which_key.mappings.s = groups.search
 lvim.builtin.which_key.mappings.i = groups.insert
+lvim.builtin.which_key.mappings.q = groups.quit
 lvim.builtin.which_key.mappings.T = groups.terra
 lvim.builtin.which_key.mappings["Lt"] = { ":TSConfigInfo<CR>", "Treesitter Info" }
 

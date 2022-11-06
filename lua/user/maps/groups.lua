@@ -1,7 +1,5 @@
 local cmd = require("user.cmd")
-
 local gitsigns = require("gitsigns")
-
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
 
@@ -147,6 +145,17 @@ M.git = {
         r = { gitsigns.reset_hunk, "  Reset Hunk" },
         l = { gitsigns.blame_line, "  Blame Line" },
     },
+}
+
+M.quit = {
+    name = "Quit",
+    s = { ":silent wq<CR>", "Save and Quit Pane (:wq)" },
+    p = { ":silent BufferLinePickClose<CR>", "Pick Buffer" },
+    c = { cmd.quit.custom_buffers, "Custom Filter" },
+    q = { cmd.quit.current_buffer, "Current" },
+    o = { cmd.quit.other_buffers, "Other" },
+    h = { cmd.quit.hidden_buffers, "Hidden" },
+    a = { cmd.quit.all_buffers, "All" },
 }
 
 M.marks = {
