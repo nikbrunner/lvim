@@ -2,6 +2,7 @@ local _, actions = pcall(require, "telescope.actions")
 
 lvim.builtin.telescope.defaults.layout_config.width = 0.95
 lvim.builtin.telescope.defaults.layout_config.preview_cutoff = 75
+lvim.builtin.telescope.defaults.initial_mode = "insert"
 lvim.builtin.telescope.pickers.find_files.previewer = nil
 
 lvim.builtin.telescope.defaults.mappings = {
@@ -16,7 +17,6 @@ lvim.builtin.telescope.defaults.mappings = {
 
         ["<Down>"] = actions.move_selection_next,
         ["<Up>"] = actions.move_selection_previous,
-
         ["<CR>"] = actions.select_default,
         ["<C-x>"] = actions.select_horizontal,
         ["<C-v>"] = actions.select_vertical,
