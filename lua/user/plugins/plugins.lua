@@ -25,4 +25,10 @@ lvim.plugins = {
         requires = "nvim-treesitter/nvim-treesitter",
         after = "nvim-treesitter",
     },
+    {
+        "nvim-treesitter/playground",
+        requires = "nvim-treesitter/nvim-treesitter",
+        after = "nvim-treesitter",
+        run = ":TSInstall query",
+    },
 }
