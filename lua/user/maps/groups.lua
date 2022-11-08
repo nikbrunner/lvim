@@ -239,4 +239,10 @@ M.terra = {
     },
 }
 
+M.copy = {
+    name = "Copy",
+    f = { cmd.copy.fullPath, "Full Path" },
+    r = { cmd.copy.relativePath, "Relative Path" },
+    n = { cmd.copy.fileName, "File Name" },
+}
 return M

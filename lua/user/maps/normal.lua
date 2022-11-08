@@ -47,6 +47,7 @@ wk.mappings.g = groups.git
 wk.mappings.s = groups.search
 wk.mappings.i = groups.insert
 wk.mappings.q = groups.quit
+wk.mappings.c = groups.copy
 wk.mappings.T = groups.terra
 wk.mappings["Lt"] = { ":TSConfigInfo<CR>", "Treesitter Info" }
 
