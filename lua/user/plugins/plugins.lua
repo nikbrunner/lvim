@@ -20,4 +20,9 @@ lvim.plugins = {
         "kylechui/nvim-surround",
         tag = "*",
     },
+    {
+        "windwp/nvim-ts-autotag",
+        requires = "nvim-treesitter/nvim-treesitter",
+        after = "nvim-treesitter",
+    },
 }
