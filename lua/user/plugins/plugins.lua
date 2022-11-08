@@ -16,4 +16,8 @@ lvim.plugins = {
             },
         },
     },
+    {
+        "kylechui/nvim-surround",
+        tag = "*",
+    },
 }
