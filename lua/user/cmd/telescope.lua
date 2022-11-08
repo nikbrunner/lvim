@@ -96,7 +96,7 @@ M.find_word = function()
 end
 
 M.find_open_buffer = function()
-    builtin.buffers(themes.get_dropdown({}))
+    builtin.buffers(themes.get_dropdown({ initial_mode = "insert" }))
 end
 
 return M
