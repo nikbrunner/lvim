@@ -10,7 +10,6 @@ n_map["<S-h>"] = "^"
 n_map["vv"] = ":norm ^v$<CR>"
 n_map["n"] = "nzzzv"
 n_map["N"] = "Nzzzv"
-n_map["dd"] = cmd.edit.smart_dd()
 n_map["<M-h>"] = ":bprevious<CR>"
 n_map["<M-l>"] = ":bnext<CR>"
 
