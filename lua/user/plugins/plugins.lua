@@ -31,4 +31,7 @@ lvim.plugins = {
         after = "nvim-treesitter",
         run = ":TSInstall query",
     },
+    {
+        "b0o/incline.nvim",
+    },
 }
