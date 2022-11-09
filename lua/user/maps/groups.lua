@@ -52,7 +52,8 @@ M.lsp = {
     f = { require("lvim.lsp.utils").format, "Format" },
     i = { "<cmd>LspInfo<CR>", "Info" },
     I = { "<cmd>Mason<CR>", "Mason Info" },
-    t = { "<cmd>Trouble<CR>", "Trouble" },
+    t = { "<cmd>Trouble document_diagnostics<CR>", "Troubles in Document" },
+    T = { "<cmd>Trouble workspace_diagnostics<CR>", "Troubles in Workspace" },
     j = {
         vim.diagnostic.goto_next,
         "Next Diagnostic",
