@@ -12,6 +12,7 @@ n_map["n"] = "nzzzv"
 n_map["N"] = "Nzzzv"
 n_map["<M-h>"] = ":bprevious<CR>"
 n_map["<M-l>"] = ":bnext<CR>"
+n_map["<C-f>"] = cmd.nav.pick_window
 
 -- Function Keys
 n_map["<F7>"] = "<cmd>CccPick<CR>"

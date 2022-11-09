@@ -37,4 +37,8 @@ lvim.plugins = {
         after = "nvim-treesitter",
         run = ":TSInstall query",
     },
+    {
+        "s1n7ax/nvim-window-picker",
+        tag = "v1.*",
+    },
 }
