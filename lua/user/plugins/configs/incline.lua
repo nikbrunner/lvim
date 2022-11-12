@@ -100,8 +100,8 @@ incline.setup({
             vertical = "bottom",
             horizontal = "right",
         },
-        -- width = "fit",
-        width = "fill",
+        width = "fit",
+        -- width = "fill",
         winhighlight = {
             active = {
                 EndOfBuffer = "None",
