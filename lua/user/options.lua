@@ -1,5 +1,5 @@
 vim.opt.relativenumber = true
-vim.opt.timeoutlen = 100
+vim.opt.timeoutlen = 50
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 10
 vim.opt.scrolloff = 12
