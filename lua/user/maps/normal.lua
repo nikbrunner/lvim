@@ -4,7 +4,7 @@ local groups = require("user.maps.groups")
 ----------------------------------------------------------- No Leader
 local n_map = lvim.keys.normal_mode
 
-n_map["<CR>"] = ":w<cr>"
+n_map["<CR>"] = ":wa<cr>"
 n_map["<S-l>"] = ":tabnext<CR>"
 n_map["<S-h>"] = ":tabprev<CR>"
 n_map["vv"] = ":norm ^v$<CR>"
