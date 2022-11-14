@@ -4,4 +4,5 @@ return {
     quit = require("user.cmd.quit"),
     copy = require("user.cmd.copy"),
     nav = require("user.cmd.nav"),
+    fzflua = require("user.cmd.fzflua"),
 }
