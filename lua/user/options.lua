@@ -4,6 +4,7 @@ vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 10
 vim.opt.scrolloff = 12
 vim.opt.sidescrolloff = 24
+vim.opt.cursorline = true -- highlight the current line
 
 -- Lvim
 lvim.log.level = "warn"
