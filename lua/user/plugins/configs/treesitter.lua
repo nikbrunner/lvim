@@ -15,4 +15,5 @@ lvim.builtin.treesitter.ensure_installed = {
     "rust",
     "java",
     "yaml",
+    "jsdoc",
 }
