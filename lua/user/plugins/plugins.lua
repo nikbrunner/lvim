@@ -41,4 +41,7 @@ lvim.plugins = {
         "s1n7ax/nvim-window-picker",
         tag = "v1.*",
     },
+    {
+        "nmac427/guess-indent.nvim",
+    },
 }
