@@ -10,7 +10,7 @@ M.find_files_without_preview = function(opts)
     opts.winopts = opts.winopts
         or {
             height = 0.25,
-            width = 0.5,
+            width = 0.35,
             preview = {
                 layout = "vertical",
                 hidden = "hidden",
@@ -256,29 +256,6 @@ end
 M.find_spelling = function(opts)
     opts = opts or {}
     fzf_lua.spell_suggest(opts)
-end
-
--- Find related files based on the current file's name
--- TODO Default text / prompt doesnt work
-M.find_related_files = function(opts)
-    opts = opts
-        or {
-            -- files = {
-            -- 	prompt = "Find related files: ",
-            -- },
-            -- default_text = general_commands.get_current_filename(),
-            winopts = {
-                height = 0.25,
-                width = 0.75,
-                preview = {
-                    hidden = "hidden",
-                },
-            },
-        }
-
-    Vin.lib.put("opts", opts)
-
-    fzf_lua.files(opts)
 end
 
 return M
