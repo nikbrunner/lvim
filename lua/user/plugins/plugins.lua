@@ -1,6 +1,4 @@
 lvim.plugins = {
-    { "~/Documents/dev/repos/personal/terra-theme/nvim" },
-    -- { "terra-theme/nvim" },
     { "ThePrimeagen/harpoon" },
     { "b0o/incline.nvim" },
     { "folke/trouble.nvim", cmd = "TroubleToggle" },
@@ -56,5 +54,11 @@ lvim.plugins = {
     },
     {
         "dnlhc/glance.nvim",
+    },
+    -- Themes
+    { "~/Documents/dev/repos/personal/terra-theme/nvim" },
+    -- { "terra-theme/nvim" },
+    {
+        "EdenEast/nightfox.nvim",
     },
 }
