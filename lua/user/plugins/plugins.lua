@@ -3,22 +3,12 @@ lvim.plugins = {
     { "b0o/incline.nvim" },
     { "folke/trouble.nvim", cmd = "TroubleToggle" },
     { "folke/zen-mode.nvim" },
-    {
-        "folke/todo-comments.nvim",
-        requires = "nvim-lua/plenary.nvim",
-    },
+    { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
     { "uga-rosa/ccc.nvim" },
     { "kazhala/close-buffers.nvim" },
     {
         "anuvyklack/pretty-fold.nvim",
-        requires = {
-            {
-                "anuvyklack/fold-preview.nvim",
-            },
-            {
-                "anuvyklack/keymap-amend.nvim",
-            },
-        },
+        requires = { { "anuvyklack/fold-preview.nvim" }, { "anuvyklack/keymap-amend.nvim" } },
     },
     {
         "kylechui/nvim-surround",
@@ -49,13 +39,11 @@ lvim.plugins = {
     },
     {
         "ibhagwan/fzf-lua",
-        -- optional for icon support
         requires = { "kyazdani42/nvim-web-devicons" },
     },
     {
         "dnlhc/glance.nvim",
     },
-    -- Themes
     { "~/Documents/dev/repos/personal/terra-theme/nvim" },
     -- { "terra-theme/nvim" },
     {
