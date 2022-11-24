@@ -54,4 +54,7 @@ lvim.plugins = {
         -- optional for icon support
         requires = { "kyazdani42/nvim-web-devicons" },
     },
+    {
+        "dnlhc/glance.nvim",
+    },
 }
