@@ -9,5 +9,5 @@ vim.opt.cursorline = true -- highlight the current line
 -- Lvim
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "carbonfox"
+lvim.colorscheme = "terra"
 lvim.transparent_window = false

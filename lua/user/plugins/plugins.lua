@@ -46,7 +46,4 @@ lvim.plugins = {
     },
     { "~/Documents/dev/repos/personal/terra-theme/nvim" },
     -- { "terra-theme/nvim" },
-    {
-        "EdenEast/nightfox.nvim",
-    },
 }
