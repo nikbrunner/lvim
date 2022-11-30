@@ -45,5 +45,6 @@ lvim.plugins = {
         "dnlhc/glance.nvim",
     },
     { "~/Documents/dev/repos/personal/terra-theme/nvim" },
+    { "chentoast/marks.nvim" },
     -- { "terra-theme/nvim" },
 }
