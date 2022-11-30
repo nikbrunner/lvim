@@ -3,4 +3,6 @@ if not present then
     return
 end
 
-terra.setup()
+terra.setup({
+    season = "summer",
+})
