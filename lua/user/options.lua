@@ -11,3 +11,6 @@ lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
 lvim.colorscheme = "terra"
 lvim.transparent_window = false
+
+-- Disable lir
+lvim.builtin.lir.active = false
