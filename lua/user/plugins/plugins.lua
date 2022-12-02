@@ -47,4 +47,5 @@ lvim.plugins = {
     { "~/Documents/dev/repos/personal/terra-theme/nvim" },
     { "chentoast/marks.nvim" },
     -- { "terra-theme/nvim" },
+    { "nvim-telescope/telescope-ui-select.nvim" },
 }
