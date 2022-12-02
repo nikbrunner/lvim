@@ -31,6 +31,7 @@ n_map["<F9>"] = "<cmd>TroubleToggle<CR>"
 -- Buffer Maps
 local n_buffer_map = lvim.lsp.buffer_mappings.normal_mode
 
+-- G-Maps
 -- Trouble
 -- n_buffer_map["gd"] = { "<cmd>Trouble lsp_definitions<CR>", "LSP Definitons" }
 -- n_buffer_map["gr"] = { "<cmd>Trouble lsp_references<CR>", "LSP References" }
@@ -40,6 +41,8 @@ n_buffer_map["gr"] = { "<cmd>Glance references<CR>", "LSP References" }
 n_buffer_map["gd"] = { "<cmd>Glance definitions<CR>", "LSP Definitons" }
 n_buffer_map["gy"] = { "<cmd>Glance type_definitions<CR>", "LSP Type Definitons" }
 n_buffer_map["gi"] = { "<cmd>Glance implementations<CR>", "LSP Implementations" }
+
+n_buffer_map["gm"] = { "<cmd>Telescope marks theme=cursor<CR>", "LSP Implementations" }
 
 ----------------------------------------------------------- With Leader
 lvim.leader = "space"
