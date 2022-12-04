@@ -61,6 +61,8 @@ wk.mappings["f"] = { cmd.fzflua.find_files_without_preview, "Find Files" }
 wk.mappings["F"] = { cmd.telescope.find_files_with_preview, "Find Files with Preview" }
 wk.mappings["/"] = { cmd.telescope.find_in_file, "Find Text in File" }
 wk.mappings[" "] = { cmd.telescope.find_open_buffer, "Open Buffers" }
+wk.mappings["M"] = { "<C-w>|", "  Maximize Split" }
+wk.mappings["r"] = { "<C-w>=", "  Restore Splits" }
 
 -- Groups
 wk.mappings.t = groups.tabs
