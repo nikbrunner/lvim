@@ -10,6 +10,8 @@ n_map["<S-h>"] = "^"
 n_map["vv"] = ":norm ^v$<CR>"
 n_map["n"] = "nzzzv"
 n_map["N"] = "Nzzzv"
+n_map["j"] = "gj"
+n_map["k"] = "gk"
 n_map["<C-f>"] = cmd.nav.pick_window
 
 --NOTE: Currently disabled because used for TMUX navigation
