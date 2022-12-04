@@ -48,4 +48,5 @@ lvim.plugins = {
     { "chentoast/marks.nvim" },
     -- { "terra-theme/nvim" },
     { "nvim-telescope/telescope-ui-select.nvim" },
+    { "ThePrimeagen/vim-be-good" },
 }
