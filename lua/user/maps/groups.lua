@@ -248,4 +248,24 @@ M.copy = {
     r = { cmd.copy.relativePath, "Relative Path" },
     n = { cmd.copy.fileName, "File Name" },
 }
+
+M.buffers = {
+    name = "Buffers",
+    p = { "<cmd>BufferLinePick<CR>", "Pick" },
+    o = { "<cmd>Telescope buffers<CR>", "Open" },
+    h = { "<cmd>BufferLineCyclePrev<CR>", "< Previous" },
+    l = { "<cmd>BufferLineCycleNext<CR>", "Next >" },
+    c = {
+        name = "Close",
+        h = { "<cmd>BufferLineCloseLeft<CR>", "Close all to the left" },
+        l = { "<cmd>BufferLineCloseRight<CR>", "Close all to the right" },
+        p = { "<cmd>BufferLinePickClose<CR>", "Pick which buffer to close" },
+    },
+    s = {
+        name = "Sort",
+        d = { "<cmd>BufferLineSortByDirectory<CR>", "Sort by directory" },
+        l = { "<cmd>BufferLineSortByExtension<CR>", "Sort by language" },
+    },
+}
+
 return M
