@@ -67,6 +67,22 @@ wk.mappings["/"] = { cmd.telescope.find_in_file, "Find Text in File" }
 wk.mappings[" "] = { "<C-^>", "Alternative File" }
 wk.mappings["M"] = { "<C-w>|", "  Maximize Split" }
 wk.mappings["r"] = { "<C-w>=", "  Restore Splits" }
+wk.mappings["u"] = {
+    function()
+        local isNvimTreeOpen = require("nvim-tree.view").is_visible()
+
+        vim.cmd("let g:undotree_SplitWidth = 40")
+
+        if isNvimTreeOpen then
+            -- Close NvimTree to prevent double sidebars
+            vim.cmd.NvimTreeClose()
+            vim.cmd.UndotreeToggle()
+        else
+            vim.cmd.UndotreeToggle()
+        end
+    end,
+    "UndoTree",
+}
 
 -- Groups
 wk.mappings.t = groups.tabs
