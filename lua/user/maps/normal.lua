@@ -13,6 +13,7 @@ n_map["N"] = "Nzzzv"
 n_map["j"] = "gj"
 n_map["k"] = "gk"
 
+n_map["<M-[>"] = "<cmd>NvimTreeToggle<CR>"
 n_map["<C-f>"] = cmd.nav.pick_window
 n_map["<C-p>"] = "<cmd>BufferLinePick<CR>"
 n_map["<C-q>"] = "<cmd>BufferLinePickClose<CR>"
@@ -60,29 +61,13 @@ wk.mappings["w"] = {}
 -- Singles
 wk.mappings["n"] = { ":nohl<CR>", WhichKeyIgnoreLabel }
 wk.mappings["z"] = { "<cmd>ZenMode<CR>", "Zen" }
-wk.mappings["f"] = { cmd.fzflua.find_files_without_preview, "Find Files" }
-wk.mappings["F"] = { cmd.telescope.find_files_with_preview, "Find Files with Preview" }
+wk.mappings["f"] = { cmd.fzflua.find_files_with_preview, "Find Files" }
 wk.mappings["/"] = { cmd.telescope.find_in_file, "Find Text in File" }
 -- wk.mappings[" "] = { cmd.telescope.find_open_buffer, "Open Buffers" }
 wk.mappings[" "] = { "<C-^>", "Alternative File" }
 wk.mappings["M"] = { "<C-w>|", "  Maximize Split" }
 wk.mappings["r"] = { "<C-w>=", "  Restore Splits" }
-wk.mappings["u"] = {
-    function()
-        local isNvimTreeOpen = require("nvim-tree.view").is_visible()
-
-        vim.cmd("let g:undotree_SplitWidth = 40")
-
-        if isNvimTreeOpen then
-            -- Close NvimTree to prevent double sidebars
-            vim.cmd.NvimTreeClose()
-            vim.cmd.UndotreeToggle()
-        else
-            vim.cmd.UndotreeToggle()
-        end
-    end,
-    "UndoTree",
-}
+wk.mappings["u"] = { cmd.edit.undo, "UndoTree" }
 
 -- Groups
 wk.mappings.t = groups.tabs
@@ -96,6 +81,11 @@ wk.mappings.c = groups.copy
 wk.mappings.T = groups.terra
 wk.mappings.b = groups.buffers
 wk.mappings["Lt"] = { ":TSConfigInfo<CR>", "Treesitter Info" }
+wk.mappings.d["l"] = {
+    name = "Log",
+    l = { cmd.edit.log_symbol, "Auto Log Symbol" },
+    d = { cmd.edit.delete_logs, "Delete Logs" },
+}
 
 -- Tabs
 wk.mappings["1"] = { "1gt", WhichKeyIgnoreLabel }

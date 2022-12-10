@@ -221,11 +221,6 @@ M.marks = {
     },
 }
 
-M.insert = {
-    name = "Insert",
-    l = { cmd.edit.log_word, "Log Word" },
-}
-
 M.terra = {
     name = "Terra",
     s = {
