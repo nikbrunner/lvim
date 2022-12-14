@@ -112,7 +112,7 @@ fzf.setup({
         fzf = {
             -- fzf '--bind=' options
             ["ctrl-z"] = "abort",
-            ["ctrl-u"] = "unix-line-discard",
+            -- ["ctrl-u"] = "unix-line-discard",
             ["ctrl-f"] = "half-page-down",
             ["ctrl-b"] = "half-page-up",
             ["ctrl-a"] = "beginning-of-line",
@@ -121,9 +121,9 @@ fzf.setup({
             -- Only valid with fzf previewers (bat/cat/git/etc)
             ["f3"] = "toggle-preview-wrap",
             ["f4"] = "toggle-preview",
-            ["shift-down"] = "preview-page-down",
-            ["shift-up"] = "preview-page-up",
             ["ctrl-q"] = "select-all+accept",
+            ["ctrl-d"] = "preview-page-down",
+            ["ctrl-u"] = "preview-page-up",
         },
     },
     actions = {
