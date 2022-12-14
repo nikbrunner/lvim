@@ -50,4 +50,16 @@ lvim.plugins = {
     { "nvim-telescope/telescope-ui-select.nvim" },
     { "ThePrimeagen/vim-be-good" },
     { "mbbill/undotree" },
+    {
+        "zbirenbaum/copilot.lua",
+        event = { "VimEnter" },
+        -- NOTE: Load the plugin settings with delay
+        config = function()
+            ---@diagnostic disable-next-line: param-type-mismatch
+            vim.defer_fn(function()
+                require("user.plugins.configs.copilot")
+                ---@diagnostic disable-next-line: param-type-mismatch
+            end, 200)
+        end,
+    },
 }
