@@ -118,7 +118,8 @@ M.git = {
         end,
         "Lazygit",
     },
-    o = { cmd.telescope.find_changed_files, "Open changed file" },
+    -- o = { cmd.telescope.find_changed_files, "Open changed file" },
+    o = { cmd.fzflua.find_modified_files_with_preview, "Open changed file" },
     C = {
         "<cmd>Telescope git_bcommits<cr>",
         "Checkout commit(for current file)",
