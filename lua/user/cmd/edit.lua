@@ -2,7 +2,7 @@ local lib = require("user.lib")
 
 local M = {}
 
-local AUTO_LOG_PREFIX = "🥼🧪🔬  Test"
+local AUTO_LOG_PREFIX = "Test"
 
 local get_auto_print_cmd = function(filetype)
     if
