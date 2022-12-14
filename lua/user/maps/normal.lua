@@ -13,10 +13,8 @@ n_map["N"] = "Nzzzv"
 n_map["j"] = "gj"
 n_map["k"] = "gk"
 
-n_map["<M-[>"] = "<cmd>NvimTreeToggle<CR>"
 n_map["<C-f>"] = cmd.nav.pick_window
-n_map["<C-p>"] = "<cmd>BufferLinePick<CR>"
-n_map["<C-q>"] = "<cmd>BufferLinePickClose<CR>"
+n_map["<C-p>"] = cmd.fzflua.find_files_with_preview
 
 -- Function Keys
 n_map["<F7>"] = "<cmd>CccPick<CR>"
