@@ -1,7 +1,7 @@
 lvim.plugins = {
     { "ThePrimeagen/harpoon" },
     { "b0o/incline.nvim" },
-    { "folke/trouble.nvim", cmd = "TroubleToggle" },
+    { "folke/trouble.nvim" },
     { "folke/zen-mode.nvim" },
     { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
     { "uga-rosa/ccc.nvim" },
